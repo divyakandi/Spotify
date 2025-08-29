@@ -77,4 +77,14 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 
 After the data is inserted, various SQL queries can be written to explore and analyze the data.
 
-
+## Query Optimization
+- Indexing: Adding indexes on frequently queried columns.
+- Query Execution Plan: Using EXPLAIN ANALYZE to review and refine query performance.
+## Query Optimization Technique
+To improve query performance, we carried out the following optimization process:
+Initial Query Performance Analysis Using EXPLAIN
+We began by analyzing the performance of a query using the EXPLAIN function.
+The query retrieved tracks based on the artist column, and the performance metrics were as follows:
+Execution time (E.T.): 6.421 ms
+Planning time (P.T.): 0.110 ms
+<img width="803" height="337" alt="image" src="https://github.com/user-attachments/assets/909f08ac-551a-42e3-97ee-be5e46d76b4a" />
