@@ -28,45 +28,8 @@ official_video	boolean,
 Stream	bigint,
 Energy_Liveness float,
 most_played_on varchar(50)
-)
-select * from spotify
-
-
-select count(*) from spotify --20594
-
---How many artists does we have
-
-select count(distinct(Artist)) from spotify --2074
-
--- How many albumswe have --11854
-select count(distinct(Album)) from spotify
-
---different typesof album_types ( we have album, compilation and single)
-select distinct(album_type) from spotify
-
---max and min duration of songs (77.9343,0)
-select max(Duration_min),
-min(Duration_min)
-from spotify
+);
 ```
-
--- any songs cannot have 0 min as suration so
-select * from spotify
-where Duration_min =0;
--- we get 2 records where album "Unwritten","Soothing Rain for Background Sounds and Natural White Noise",
---we have recorde like comments ,likes for "Unwritten" but no records for "Soothing Rain for Background Sounds and Natural White Noise"
--- so we delete records of these two
-
-delete from spotify 
-where Duration_min =0
--- this deletes those 2 records
--- then the total count will be reduced to 20592 from 20594
-
--- how many channels do we have --(6673 different channels we have)
-select distinct(channel) from spotify
-
--- different most played on platforms (youtube and spotify)
-select distinct(most_played_on) from spotify
 
 ## Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
@@ -96,3 +59,12 @@ To improve query performance, we carried out the following optimization process:
   ```sql
 CREATE INDEX idx_artist ON spotify_tracks(artist);
 ```
+
+## Performance Analysis After Index Creation
+- After creating the index, we ran the same query again and observed significant improvements in performance:
+- Execution time (E.T.): **0.153 ms**
+- Planning time (P.T.): **0.152 ms**
+- Below is the **screenshot** of the `EXPLAIN` result after index creation:
+<img width="877" height="479" alt="image" src="https://github.com/user-attachments/assets/c1e0b64d-3f42-4e29-b94f-89c57aa23512" />
+
+
