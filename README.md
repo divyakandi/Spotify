@@ -75,6 +75,7 @@ Track: The name of the song.
 Album: The album to which the track belongs.
 Album_type: The type of album (e.g., single or album).
 Various metrics such as danceability, energy, loudness, tempo, and more.
+
 After the data is inserted, various SQL queries can be written to explore and analyze the data.
 
 
