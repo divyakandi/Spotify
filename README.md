@@ -48,6 +48,7 @@ select distinct(album_type) from spotify
 select max(Duration_min),
 min(Duration_min)
 from spotify
+```
 
 -- any songs cannot have 0 min as suration so
 select * from spotify
