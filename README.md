@@ -82,9 +82,16 @@ After the data is inserted, various SQL queries can be written to explore and an
 - Query Execution Plan: Using EXPLAIN ANALYZE to review and refine query performance.
 ## Query Optimization Technique
 To improve query performance, we carried out the following optimization process:
-Initial Query Performance Analysis Using EXPLAIN
-We began by analyzing the performance of a query using the EXPLAIN function.
-The query retrieved tracks based on the artist column, and the performance metrics were as follows:
-Execution time (E.T.): 6.421 ms
-Planning time (P.T.): 0.110 ms
+- Initial Query Performance Analysis Using EXPLAIN
+- We began by analyzing the performance of a query using the EXPLAIN function.
+- The query retrieved tracks based on the artist column, and the performance metrics were as follows:
+- Execution time (E.T.): 6.421 ms
+- Planning time (P.T.): 0.110 ms
 <img width="803" height="337" alt="image" src="https://github.com/user-attachments/assets/909f08ac-551a-42e3-97ee-be5e46d76b4a" />
+
+## Index Creation on the artist Column
+- To optimize the query performance, we created an index on the artist column. This ensures faster retrieval of rows where the artist is queried.
+- SQL command for creating the index:
+  ```sql
+CREATE INDEX idx_artist ON spotify_tracks(artist);
+```
