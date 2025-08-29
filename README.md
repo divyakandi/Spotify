@@ -67,7 +67,7 @@ select distinct(channel) from spotify
 
 -- different most played on platforms (youtube and spotify)
 select distinct(most_played_on) from spotify
-```
+
 ## Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
 - Artist: The performer of the track.
