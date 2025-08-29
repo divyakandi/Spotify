@@ -67,6 +67,14 @@ select distinct(channel) from spotify
 -- different most played on platforms (youtube and spotify)
 select distinct(most_played_on) from spotify
 ```
-
+## Project Steps
+**Data Exploration**
+Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
+Artist: The performer of the track.
+Track: The name of the song.
+Album: The album to which the track belongs.
+Album_type: The type of album (e.g., single or album).
+Various metrics such as danceability, energy, loudness, tempo, and more.
+After the data is inserted, various SQL queries can be written to explore and analyze the data.
 
 
