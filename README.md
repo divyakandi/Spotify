@@ -56,7 +56,8 @@ To improve query performance, we carried out the following optimization process:
 ## Index Creation on the artist Column
 - To optimize the query performance, we created an index on the artist column. This ensures faster retrieval of rows where the artist is queried.
 - SQL command for creating the index:
-  ```sql
+
+```sql
 CREATE INDEX idx_artist ON spotify_tracks(artist);
 ```
 
