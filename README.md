@@ -73,3 +73,12 @@ CREATE INDEX idx_artist ON spotify_tracks(artist);
   ![Performance Graph](https://github.com/divyakandi/Spotify/blob/main/spotify_graphical%20view%202.png)
   ![Performance Graph](https://github.com/divyakandi/Spotify/blob/main/spotify_graphical%20view%203.png)
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
+
+## Bussiness Questions
+### 1. Retrieve the names of all tracks that have more than 1 billion streams.
+```sql
+select album, stream from spotify
+where stream > 1000000000;
+```
+-- we get 385 records
+### 2.
