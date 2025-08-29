@@ -68,7 +68,7 @@ select distinct(channel) from spotify
 select distinct(most_played_on) from spotify
 ```
 ## Project Steps
-**Data Exploration**
+### Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
 Artist: The performer of the track.
 Track: The name of the song.
