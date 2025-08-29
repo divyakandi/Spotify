@@ -51,7 +51,7 @@ To improve query performance, we carried out the following optimization process:
 - The query retrieved tracks based on the artist column, and the performance metrics were as follows:
 - Execution time (E.T.): 6.421 ms
 - Planning time (P.T.): 0.110 ms
-
+![EXPLAIN Before Index](https://github.com/divyakandi/Spotify/blob/main/spotify_explain_before_index.png)
 
 ## Index Creation on the artist Column
 - To optimize the query performance, we created an index on the artist column. This ensures faster retrieval of rows where the artist is queried.
@@ -60,6 +60,7 @@ To improve query performance, we carried out the following optimization process:
 ```sql
 CREATE INDEX idx_artist ON spotify_tracks(artist);
 ```
+![EXPLAIN After Index](https://github.com/divyakandi/Spotify/blob/main/spotify_explain_after_index.png)
 
 ## Performance Analysis After Index Creation
 - After creating the index, we ran the same query again and observed significant improvements in performance:
@@ -68,4 +69,7 @@ CREATE INDEX idx_artist ON spotify_tracks(artist);
 ## Graphical Performance Comparison
 - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
 - Graph view shows the significant drop in both execution and planning times:
-  
+  ![Performance Graph](https://github.com/divyakandi/Spotify/blob/main/spotify_graphical%20view%201.png)
+  ![Performance Graph](https://github.com/divyakandi/Spotify/blob/main/spotify_graphical%20view%202.png)
+  ![Performance Graph](https://github.com/divyakandi/Spotify/blob/main/spotify_graphical%20view%203.png)
+This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
